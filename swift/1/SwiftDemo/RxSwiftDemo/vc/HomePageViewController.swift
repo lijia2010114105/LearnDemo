@@ -43,13 +43,14 @@ extension HomePageViewController {
         
         tableView?.tableHeaderView = headerView
         
-        tableView?.es.addPullToRefresh {
-            [unowned self] in
-            
-            print("pull refresh")
-            self.tableView?.es.stopPullToRefresh()
-            self.tableView?.es.stopPullToRefresh(ignoreDate: true, ignoreFooter: false)
-        }
+        // 加上后滚动时有偏移
+//        tableView?.es.addPullToRefresh {
+//            [unowned self] in
+//
+//            print("pull refresh")
+//            self.tableView?.es.stopPullToRefresh()
+//            self.tableView?.es.stopPullToRefresh(ignoreDate: true, ignoreFooter: false)
+//        }
     }
     
     func loadData() {
