@@ -19,7 +19,7 @@ class HomePageViewModel: NSObject {
         let url: String = URL_main + GET_HOME_INTERFACE
         print(url)
         
-        QMNetworkRequest.requestData(.get, URLString: url) { (dict) in
+        QMNetworkRequest.requestData(.get, URLString: url, parameters: nil) { (dict) in
             let code = dict["code"] as! Int
             if code == 200 {
                 let result = dict["result"] as! NSDictionary
@@ -29,7 +29,11 @@ class HomePageViewModel: NSObject {
                 }
                 completeBlock()
             }
+        } failure: { (error) in
+            print("error: \(error)")
         }
+        
+        
     }
 }
 

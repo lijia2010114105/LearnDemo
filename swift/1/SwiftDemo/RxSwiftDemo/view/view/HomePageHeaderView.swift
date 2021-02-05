@@ -30,8 +30,10 @@ class HomePageHeaderView: UIView {
     }
     
     func setDataModel(dModel: HomePageTopModel) {
-        for adModel in dModel.ad! {
-            self.adArray.append(adModel)
+        if let ads = dModel.ad as NSArray? {
+            for adModel in ads {
+                self.adArray.append(adModel as! HomePageTopAdModel)
+            }
         }
         
         if self.adArray.count == 0 {
