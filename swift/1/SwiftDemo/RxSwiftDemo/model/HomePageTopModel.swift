@@ -10,9 +10,9 @@ import Foundation
 import HandyJSON
 
 class HomePageTopModel: HandyJSON {
-    var Item: HomePageTopItemModel!
-    var ad: HomePageTopAdModel!
-    var prophet: HomePageTopProphetModel!
+    var Item: [HomePageTopItemModel]?
+    var ad: [HomePageTopAdModel]?
+    var prophet: [HomePageTopProphetModel]?
     
     required init() {
         

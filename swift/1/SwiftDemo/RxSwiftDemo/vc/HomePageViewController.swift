@@ -55,7 +55,7 @@ extension HomePageViewController {
     
     func loadData() {
         homePageViewModel.loadHomePageData {
-            self.headerView.setDicData(d: self.homePageViewModel.headerDic)
+            self.headerView.setDataModel(dModel: self.homePageViewModel.topModel)
         }
     }
 }

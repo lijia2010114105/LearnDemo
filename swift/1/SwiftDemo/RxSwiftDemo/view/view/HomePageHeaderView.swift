@@ -29,13 +29,9 @@ class HomePageHeaderView: UIView {
         super.init(coder: coder)
     }
     
-    func setDicData(d: NSDictionary) {
-        if let ad = d["ad"] as? [Any] {
-            for adDic in ad {
-                if let adModel = HomePageTopAdModel.deserialize(from: adDic as? NSDictionary) {
-                    self.adArray.append(adModel)
-                }
-            }
+    func setDataModel(dModel: HomePageTopModel) {
+        for adModel in dModel.ad! {
+            self.adArray.append(adModel)
         }
         
         if self.adArray.count == 0 {
