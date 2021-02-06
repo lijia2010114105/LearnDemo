@@ -32,7 +32,7 @@ class HomePageViewController: UIViewController {
 
 extension HomePageViewController {
     func setupUI() {
-        navigationItem.title = "格局商学"
+        navigationItem.title = "Alamofire+HandyJSON"
         
         tableView = UITableView(frame: self.view.bounds, style: .grouped)
         tableView?.delegate = self

@@ -11,6 +11,8 @@ import UIKit
 class AddressBookViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationItem.title = "RxSwift"
     }
     
     override func didReceiveMemoryWarning() {
